@@ -69,23 +69,23 @@ const Community = ({
 
   return (
     <div className="h-screen w-full bg-[#111B21] ">
-      <form action="" className=" py-2 flex justify-center w-full">
+      <form action="" className=" py-2 my-3 flex justify-center w-full">
         <input
           type="search"
           placeholder="Find your friend"
           name=""
           id=""
           onChange={(e) => searchCommunity(e)}
-          className="self-center rounded pb-1 bg-[#2A3942] focus:outline-none placeholder:bg-[#2A3942] placeholder:text-[10px] pl-2 text-white  placeholder:pb-2 placeholder:pl-2 w-5/6"
+          className="self-center rounded h-12 bg-[#2A3942] focus:outline-none placeholder:bg-[#2A3942] placeholder:text-xl pl-2 text-white  placeholder:pb-2 placeholder:pl-2 w-5/6"
         />
         <button
           type="submit"
-          className="bg-[#2A3942] ml-1 px-2 rounded h-7 text-[#9CA3AF] text-xs"
+          className="bg-[#2A3942] ml-2 px-5 rounded h-12 text-[#9CA3AF] text-xl"
         >
           Search
         </button>
       </form>
-      <div className="w-full flex py-3 justify-center gap-10 text-white">
+      <div className="w-full flex py-3  mb-5 justify-center text-3xl gap-10 text-white">
         <i
           data-tooltip-id="my-tooltip"
           data-tooltip-content="Find user"
@@ -114,13 +114,13 @@ const Community = ({
               onClick={() => getSingleUser(user)}
             >
               <div className="flex items-center gap-3 my-1">
-                <div className="py-1 px-2 bg-[#6a7175] w-fit rounded-full">
+                <div className="py-4 px-5 bg-[#6a7175] w-fit rounded-full">
                   <i className="fa-solid fa-user"></i>
                 </div>
-                <p className="text-white text-xs">{user.nickname}</p>
+                <p className="text-white text-lg">{user.nickname}</p>
               </div>
 
-              <p className="text-[8px] text-gray-400 hover:text-gray-600 cursor-pointer	">
+              <p className="text-sm text-gray-400 hover:text-gray-600 cursor-pointer	">
                 View details
               </p>
             </li>
@@ -129,12 +129,12 @@ const Community = ({
           filteredLobbies.map((lobby, index) => (
             <li key={index} className="flex justify-between items-center my-2">
               <div className="flex items-center gap-3 my-1">
-                <div className="py-1 px-2 bg-[#6a7175] w-fit rounded-full">
+                <div className="py-4 px-5 bg-[#6a7175] w-fit rounded-full">
                   <i className="fa-solid fa-user"></i>
                 </div>
                 <div className="flex flex-col gap-1">
-                  <p className="text-white text-xs">{lobby.name}</p>
-                  <p className="text-white text-[8px]">
+                  <p className="text-white text-lg">{lobby.name}</p>
+                  <p className="text-white text-xs">
                     {lobby.user_count === "1"
                       ? `${lobby.user_count} user`
                       : `${lobby.user_count} users`}
@@ -143,7 +143,7 @@ const Community = ({
               </div>
 
               <button
-                className="text-white text-[10px] bg-cyan-600 hover:bg-cyan-700 px-3 rounded h-fit"
+                className="text-white text-sm bg-cyan-600 hover:bg-cyan-700 px-5 py-2 rounded h-fit"
                 onClick={() => addUserToTheLobby(user.user[0]?.id, lobby.id)}
               >
                 Join

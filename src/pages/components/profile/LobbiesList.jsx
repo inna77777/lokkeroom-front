@@ -55,9 +55,9 @@ const LobbiesList = ({
   // className = "w-full h-screen flex";
   return (
     <div className="flex w-full">
-      <div className="bg-[#111B21] w-4/12 flex flex-col px-2 py-2">
+      <div className="bg-[#111B21] w-4/12 flex flex-col px-4 py-2">
         <div className="flex justify-between items-center mb-1">
-          <h2 className="">Lobbies</h2>
+          <h2 className="text-3xl my-2">Lobbies</h2>
           <i
             className="fa-solid fa-plus"
             onClick={() => setPage("createLobby")}
@@ -69,9 +69,9 @@ const LobbiesList = ({
           id="search"
           placeholder="   🔍  search"
           onChange={(e) => searchLobby(e)}
-          className="self-center w-full rounded mt-2 pb-1 pl-3 h-4 mb-5 bg-[#202C33] focus:outline-none placeholder:bg-[#202C33] placeholder:text-[10px]  placeholder:pb-2	"
+          className="self-center w-full rounded mt-2 pl-3 h-10 mb-5 bg-[#202C33] focus:outline-none placeholder:bg-[#202C33] placeholder:text-base  placeholder:pb-2	"
         />
-        {lobbies.lobbies?.length === 0 && <p>You don't have any lobbies.</p>}
+        {lobbies.lobbies?.length === 0 && <p className="2xl">You don't have any lobbies.</p>}
         {lobbies.lobbies?.length > 0 && (
           <ul>
             {filteredLobbies.map((lobby, index) => {
@@ -81,9 +81,9 @@ const LobbiesList = ({
                   onClick={() => fetchMessages(lobby.id)}
                   className="flex justify-between items-center my-2"
                 >
-                  <p className="text-sm">{lobby.name}</p>
+                  <p className="text-xl">{lobby.name}</p>
                   {lobby.latest_message_time ? (
-                    <p className="text-[6px]">
+                    <p className="text-xs">
                       {moment(lobby.latest_message_time).isSame(moment(), "day")
                         ? moment(lobby.latest_message_time).format("HH:mm")
                         : moment(lobby.latest_message_time).format("D.MM.YY")}

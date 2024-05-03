@@ -17,7 +17,7 @@ const GroupModal = ({ uId, uNick }) => {
       marginRight: "-50%",
       transform: "translate(-50%, -50%)",
       padding: "0",
-      width: "200px",
+      width: "400px",
       borderRadius: "12px",
     },
   };
@@ -59,20 +59,20 @@ const GroupModal = ({ uId, uNick }) => {
           style={customStyles}
           contentLabel="Example Modal"
         >
-          <div className="bg-[#232428] px-3 pb-5  text-white flex flex-col ">
-            <i className="fa-solid fa-xmark self-end mb-3 mt-1" onClick={closeModal}></i>
-            <div className="bg-[#111214] rounded-8 p-1">
-              <h2 className="text-base mb-2 capitalize">add {uNick} to: </h2>
-              <p className="text-sm mb-2">Your lobbies:</p>
+          <div className="bg-[#232428] px-6 pb-10  text-white flex flex-col ">
+            <i className="fa-solid fa-xmark self-end mb-6 mt-2 text-3xl" onClick={closeModal}></i>
+            <div className="bg-[#111214] rounded-lg p-2">
+              <h2 className="text-[32px] mb-4 capitalize">add {uNick} to: </h2>
+              <p className="text-2xl mb-3">Your lobbies:</p>
               <ul>
                 {lobbies.lobbies?.map((lobby, index) => (
                   <li
                     key={index}
-                    className="flex items-center gap-3 text-[#9CA3AF] text-xs mb-1"
+                    className="flex items-center gap-3 text-[#9CA3AF] text-xl mb-2"
                   >
                     <p>{lobby.name}</p>
                     <div onClick={() => addUserToTheLobby(uId, lobby.id)}>
-                      <i className="fa-solid fa-plus text-cyan-600 text-sm"></i>
+                      <i className="fa-solid fa-plus text-cyan-600 text-lg"></i>
                     </div>
                   </li>
                 ))}

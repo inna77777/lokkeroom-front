@@ -89,7 +89,7 @@ const LobbyMess = ({
           return (
             <li
               key={index}
-              className={`w-fit px-2 rounded bg-[#202C33] text-[12px] mb-1 flex flex-col ${
+              className={`w-fit px-2 rounded bg-[#202C33] text-2xl mb-2 flex flex-col ${
                 isMyMessage ? "self-end" : "self-start"
               }`}
             >
@@ -98,13 +98,13 @@ const LobbyMess = ({
                   {isMyMessage ? (
                     ""
                   ) : (
-                    <p className="text-[6px]">{message.nickname}</p>
+                    <p className="text-xs">{message.nickname}</p>
                   )}
-                  <p>{message.content}</p>
+                  <p >{message.content}</p>
                 </div>
                 <div className="flex gap-3 justify-center group items-center">
                   {isMyMessage ? (
-                    <span className="text-[8px] group-hover:block hidden ml-1">
+                    <span className="text-sm group-hover:block hidden ml-2">
                       <div className="flex gap-1">
                         <i
                           className="fa-solid fa-pencil"
@@ -126,7 +126,7 @@ const LobbyMess = ({
                 </div>
               </div>
 
-              <p className="text-[6px] self-end">
+              <p className="text-xs self-end">
                 {moment(message.created_at).isSame(moment(), "day")
                   ? moment(message.created_at).format("HH:mm")
                   : moment(message.created_at).format("D.MM | HH:mm")}

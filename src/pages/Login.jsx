@@ -33,11 +33,11 @@ function Login() {
 
   return (
     <div className="w-full flex flex-col justify-center	items-center">
-      <div className="border-2 m-10 p-5 w-64 rounded">
-        <h1 className="text-2xl text-center text-neutral-900 mb-5">Login</h1>
+      <div className="border-2 m-10 p-10 w-[500px] rounded">
+        <h1 className="text-4xl text-center text-neutral-900 mb-5">Login</h1>
         <form
           onSubmit={handleSubmit}
-          className="text-sm text-gray-500 flex flex-col"
+          className="text-2xl text-gray-500 flex flex-col"
         >
           <label for="login" className="flex flex-col mb-2">
             Username:

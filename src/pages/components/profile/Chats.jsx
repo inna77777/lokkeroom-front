@@ -143,11 +143,11 @@ const Chats = ({ chats, user, newChatUser = null }) => {
 
   return (
     <section className="flex text-slate-200 w-full h-screen">
-      <div className="bg-[#111B21] w-4/12 flex flex-col px-2 py-2">
-        <h2 className="mb-1">Chats</h2>
+      <div className="bg-[#111B21] w-4/12 flex flex-col px-4 py-2">
+        <h2 className="my-2  text-3xl">Chats</h2>
 
         {chats.chats?.length === 0 && (
-          <p className="mt-2 text-sm text-center">
+          <p className="mt-2 text-2xl text-center">
             You don't have
             <br />
             any chats.
@@ -161,7 +161,7 @@ const Chats = ({ chats, user, newChatUser = null }) => {
               id="search"
               placeholder="   🔍  search"
               onChange={(e) => searchChat(e)}
-              className="self-center w-full rounded mt-2 pb-1 pl-3 h-4 mb-5 bg-[#202C33] focus:outline-none placeholder:bg-[#202C33] placeholder:text-[10px]  placeholder:pb-2	"
+              className="self-center w-full rounded mt-2 pb-1 pl-3 h-10 mb-5 bg-[#202C33] focus:outline-none placeholder:bg-[#202C33] placeholder:text-base  placeholder:pb-2	"
             />
             <ul>
               {filteredChats.map((chat, index) => {
@@ -171,8 +171,8 @@ const Chats = ({ chats, user, newChatUser = null }) => {
                     onClick={() => fetchChatMessages(chat.chat_id, chat.id)}
                     className="flex justify-between items-center my-2"
                   >
-                    <p className="text-sm">{chat.nickname}</p>
-                    <p className="text-[6px]">
+                    <p className="text-xl">{chat.nickname}</p>
+                    <p className="text-xs">
                       {moment(chat.created_at).isSame(moment(), "day")
                         ? moment(chat.created_at).format("HH:mm")
                         : moment(chat.created_at).format("D.MM.YY")}
@@ -187,15 +187,15 @@ const Chats = ({ chats, user, newChatUser = null }) => {
       <div className="self-end bg-[#0B141A]  flex flex-col justify-between h-screen w-8/12">
         {chatUser.length == 0 && (
           <div className="flex justify-center items-center h-screen">
-            <p className="text-[10px] text-center px-1 bg-gray-700 rounded-lg">
+            <p className="text-2xl text-center px-2 bg-gray-700 rounded-lg">
               Select a chat to start messaging
             </p>
           </div>
         )}
         {chatUser.user && (
-          <div className="bg-[#202C33] h-12 flex items-center justify-between px-[7%]">
+          <div className="bg-[#202C33] h-20 flex items-center justify-between px-[7%] text-2xl">
             <div className="flex items-center gap-5">
-              <div className="py-1 px-2 bg-[#6a7175] w-fit rounded-full">
+              <div className="py-2 px-3.5 bg-[#6a7175] w-fit rounded-full">
                 <i className="fa-solid fa-user"></i>
               </div>
               {chatUser.user?.nickname}
@@ -224,7 +224,7 @@ const Chats = ({ chats, user, newChatUser = null }) => {
                 return (
                   <li
                     key={index}
-                    className={`w-fit px-2 rounded bg-[#202C33] text-[12px] mb-1 flex flex-col ${
+                    className={`w-fit  rounded bg-[#202C33] text-2xl mb-2 flex flex-col items-start px-5 ${
                       isMyMessage ? "self-end" : "self-start"
                     }`}
                   >
@@ -232,7 +232,7 @@ const Chats = ({ chats, user, newChatUser = null }) => {
                     <div className="flex gap-3 justify-center group items-center">
                       <p>{message.content}</p>
                       {isMyMessage ? (
-                        <span className="text-[8px] group-hover:block  hidden">
+                        <span className="text-sm group-hover:block  hidden ">
                           <div className="flex gap-1 ">
                             <i
                               className="fa-solid fa-pencil"
@@ -254,7 +254,7 @@ const Chats = ({ chats, user, newChatUser = null }) => {
                         ""
                       )}
                     </div>
-                    <p className="text-[6px] self-end">
+                    <p className="text-xs self-end">
                       {moment(message.created_at).isSame(moment(), "day")
                         ? moment(message.created_at).format("HH:mm")
                         : moment(message.created_at).format("D.MM | HH:mm")}

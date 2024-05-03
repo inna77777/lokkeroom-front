@@ -28,7 +28,7 @@ const HomePage = () => {
      transform: "translate(-50%, -50%)",
      backgroundColor: "#747264",
      padding: "0",
-     width: "300px",
+     width: "500px",
      color: "white",
      borderRadius: "16px",
    },
@@ -138,27 +138,27 @@ const HomePage = () => {
           style={customStyles}
           contentLabel="Example§ Modal"
         >
-          <div className="bg-[#D77660] flex justify-end h-14 p-2 relative ">
-            <i className="fa-regular fa-user py-2.5 px-3 bg-[#6a7175] w-fit rounded-full text-[35px] h-fit absolute left-3 bottom-[-28px] border-4 border-[#232428]"></i>
-            <i className="fa-solid fa-xmark" onClick={closeModal}></i>
+          <div className="bg-[#D77660] flex justify-end h-[120px] p-3 relative ">
+            <i className="fa-regular fa-user py-3 px-4 bg-[#6a7175] w-fit rounded-full text-[80px] h-fit absolute left-6 bottom-[-50px] border-8 border-[#232428]"></i>
+            <i className="fa-solid fa-xmark text-3xl" onClick={closeModal}></i>
             {/* <i className="fa-solid fa-pencil  bg-slate-500 rounded-full flex justify-center items-center text-xs  h-fit py-1 px-1.5"></i> */}
           </div>
-          <div className="bg-[#232428] p-2 pt-10">
-            <div className="bg-[#111214] rounded p-1 pb-16">
-              <h2 className="text-base mb-2 capitalize">
+          <div className="bg-[#232428] p-6 pt-16">
+            <div className="bg-[#111214] rounded p-4 pb-24">
+              <h2 className="text-4xl mb-3 capitalize">
                 {user.user[0].nickname}
               </h2>
-              <div className="bg-white h-[0.5px]"></div>
-              <span className="text-[8px] uppercase font-bold 	">
+              <div className="bg-white h-[0.5px] mb-3"></div>
+              <span className="text-lg uppercase font-bold">
                 Some words about myself :
               </span>
-              <p className="text-zinc-300 text-[14px]">
+              <p className="text-zinc-300 text-base my-2">
                 {user.user[0].description}
               </p>
-              <span className="uppercase text-[8px] font-bold	">
+              <span className="uppercase text-lg font-bold	">
                 On the platform from :
               </span>
-              <p className="text-zinc-300 text-[14px]">
+              <p className="text-zinc-300 text-base mt-2">
                 {moment(user.user[0].created_at).format("D.MM.YY")}
               </p>
           

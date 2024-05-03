@@ -37,14 +37,14 @@ const CreateLobby = ({ setPage, fetchLobbies }) => {
         className="py-2 flex flex-col justify-center items-center w-full mt-[10%] gap-2"
         onSubmit={(e) => createLobby(e)}
       >
-        <label htmlFor="lobbyName" className="text-base">Name Lobby</label>
+        <label htmlFor="lobbyName" className="text-3xl mb-2">Name Lobby</label>
         <input
           type="text"
           name="lobbyName"
           placeholder="Name your lobby"
-          className="rounded pb-1 pl-3 bg-[#2A3942] focus:outline-none placeholder:bg-[#2A3942] placeholder:text-[10px]  placeholder:pb-2 placeholder:pl-2 w-5/6"
+          className="rounded h-10 pl-3  mb-3 bg-[#2A3942] focus:outline-none placeholder:bg-[#2A3942] placeholder:text-lg  placeholder:pb-2 placeholder:pl-2 w-5/6"
         />
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 mb-3">
           <input
             type="checkbox"
             name="private"
@@ -52,14 +52,14 @@ const CreateLobby = ({ setPage, fetchLobbies }) => {
             checked={privateChecked}
             onChange={handleCheckboxChange}
           />
-          <label htmlFor="private" className="text-sm">
+          <label htmlFor="private" className="text-2xl">
             Private
           </label>
         </div>
 
         <button
           type="submit"
-          className="bg-[#2A3942] hover:bg-gray-700 ml-1 px-2 rounded h-7 text-[8px] w-fit"
+          className="bg-[#2A3942] hover:bg-gray-700 ml-2 py-2 px-4 rounded text-base w-fit"
         >
           Create Lobby
         </button>

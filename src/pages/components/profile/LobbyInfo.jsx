@@ -21,7 +21,7 @@ const LobbyInfo = ({ lobbyInfo, userCur, createUserChat, setPage }) => {
       bottom: "-2px",
       right: "-2px",
       left: "auto",
-      width: "200px",
+      width: "400px",
       backgroundColor: "#232428",
       padding: "0px",
       borderRadius: "12px 0 0 12px",
@@ -90,21 +90,21 @@ const LobbyInfo = ({ lobbyInfo, userCur, createUserChat, setPage }) => {
     <div>
       {lobbyInfo.length == 0 && (
         <div className="flex justify-center items-center h-screen">
-          <p className="text-[10px] text-center px-1 bg-gray-700 rounded-lg">
+          <p className="text-2xl text-center px-1 bg-gray-700 rounded-lg">
             Select a lobby to start messaging
           </p>
         </div>
       )}
 
       {lobbyInfo.info && (
-        <div className="bg-[#202C33] h-12 flex items-center justify-between px-[7%]">
+        <div className="bg-[#202C33] h-20 text-2xl flex items-center justify-between px-[7%]">
           <div className="flex items-center gap-5">
-            <div className="py-1 px-2 bg-[#6a7175] w-fit rounded-full">
+            <div className="py-2 px-3.5 bg-[#6a7175] w-fit rounded-full">
               <i className="fa-solid fa-user"></i>
             </div>
             <div className="flex flex-col">
-              <span className="text-sm">{lobbyInfo.info?.name} </span>
-              <span className="text-[8px]">
+              <span className="text-2xl">{lobbyInfo.info?.name} </span>
+              <span className="text-sm">
                 {lobbyInfo.info?.count === "1"
                   ? `${lobbyInfo.info.count} user`
                   : `${lobbyInfo.info.count} users`}
@@ -148,13 +148,13 @@ const LobbyInfo = ({ lobbyInfo, userCur, createUserChat, setPage }) => {
         style={customStyles}
         contentLabel="Example Modal"
       >
-        <div className="bg-[#232428] px-3 pb-5  text-white flex flex-col  ">
+        <div className="bg-[#232428] px-6 pb-10   text-white flex flex-col  ">
           <i
-            className="fa-solid fa-xmark self-end mb-3 mt-1"
+            className="fa-solid fa-xmark self-end mb-6 mt-2 text-3xl"
             onClick={closeModal}
           ></i>
-          <div className="bg-[#111214] rounded-lg p-1 px-2">
-            <h2 className="text-sm mb-2  text-center">
+          <div className="bg-[#111214] rounded-lg p-2  px-4">
+            <h2 className="text-2xl mb-4 text-center">
               {lobbyInfo.info?.count === "1"
                 ? `${lobbyInfo.info?.count} user`
                 : `${lobbyInfo.info?.count} users`}
@@ -163,10 +163,10 @@ const LobbyInfo = ({ lobbyInfo, userCur, createUserChat, setPage }) => {
               {lobbyUsers.users?.map((user, index) => (
                 <li
                   key={index}
-                  className="flex items-center justify-start gap-3 text-[#9CA3AF] text-xs mb-1.5"
+                  className="flex items-center justify-start gap-6 text-[#9CA3AF] text-lg mb-3"
                 >
                   <div
-                    className="flex items-center justify-start gap-3"
+                    className="flex items-center justify-start gap-6"
                     onClick={
                       lobbyInfo.info?.admin_id === userCur.user[0]?.id &&
                       userCur.user[0]?.id !== user.id
@@ -174,7 +174,7 @@ const LobbyInfo = ({ lobbyInfo, userCur, createUserChat, setPage }) => {
                         : null
                     }
                   >
-                    <div className="py-1 px-2 bg-[#6a7175] w-fit rounded-full">
+                    <div className="py-2.5 px-4 bg-[#6a7175] w-fit rounded-full">
                       <i className="fa-solid fa-user"></i>
                     </div>
                     <p>{user.nickname}</p>
@@ -183,8 +183,8 @@ const LobbyInfo = ({ lobbyInfo, userCur, createUserChat, setPage }) => {
                   {lobbyInfo.info?.admin_id === userCur.user[0]?.id &&
                   userCur.user[0]?.id !== user.id ? (
                     <button
-                      className="text-[6px]
-                    bg-red-800 h-fit rounded-md px-2"
+                      className="text-sm
+                    bg-red-800 h-fit rounded-md px-4" py-2
                       onClick={() =>
                         removeUser(user.id, user.nickname, lobbyInfo.info?.id)
                       }

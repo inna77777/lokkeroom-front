@@ -42,7 +42,7 @@ const NewMessForm = ({
       </div>
       <form
         action=""
-        className="bg-[#202C33] py-2 flex justify-center w-full mt-2"
+        className="bg-[#202C33] py-5 flex justify-center w-full mt-2"
         onSubmit={(e) => handleSubmit(e)}
       >
         <input
@@ -51,10 +51,13 @@ const NewMessForm = ({
           value={valueMess}
           onChange={(e) => setValueMess(e.target.value)}
           placeholder="Write message"
-          className="self-center rounded pb-1 pl-3 bg-[#2A3942] focus:outline-none placeholder:bg-[#2A3942] placeholder:text-[10px]  placeholder:pb-2 placeholder:pl-3 w-5/6"
+          className="self-center rounded-xl h-12  pl-3 bg-[#2A3942] focus:outline-none placeholder:bg-[#2A3942] placeholder:text-xl  placeholder:pb-2 placeholder:pl-3 w-5/6"
         />
-        <button type="submit" className="bg-[#2A3942] ml-1 px-2 rounded h-7">
-          <i className="fa-regular fa-paper-plane"></i>
+        <button
+          type="submit"
+          className="bg-[#2A3942] ml-1 h-12 px-4 rounded-xl  "
+        >
+          <i className="fa-regular fa-paper-plane text-2xl"></i>
         </button>
       </form>
     </div>

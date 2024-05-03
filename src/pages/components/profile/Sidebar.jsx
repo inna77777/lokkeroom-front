@@ -12,8 +12,8 @@ const Sidebar = ({ fetchChats, fetchLobbies, fetchCommunity, openModal }) => {
   };
 
   return (
-    <div className="flex flex-col justify-between items-center pt-3 pb-3 px-3 text-gray-400 bg-[#202c33] text-xl h-screen">
-      <div className="flex flex-col gap-3 w-full">
+    <div className="flex flex-col justify-between items-center pt-3 pb-3 px-3 text-gray-400 bg-[#202c33] text-4xl h-screen">
+      <div className="flex flex-col gap-7 w-full">
         <i
           data-tooltip-id="my-tooltip"
           data-tooltip-content="Chats"
@@ -48,7 +48,6 @@ const Sidebar = ({ fetchChats, fetchLobbies, fetchCommunity, openModal }) => {
           onClick={openModal}
         ></i>
       </div>
-      <Tooltip id="my-tooltip" />
     </div>
   );
 };
