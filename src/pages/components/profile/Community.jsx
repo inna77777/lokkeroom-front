@@ -103,7 +103,6 @@ const Community = ({
           onClick={() => setGroup("lobbies")}
         ></i>
       </div>
-      <Tooltip id="my-tooltip" />
 
       <ul className="px-[4%]">
         {group === "users" &&

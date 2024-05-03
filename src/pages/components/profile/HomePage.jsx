@@ -7,6 +7,7 @@ import moment from "moment";
 
 import useAuthHeaders from "../../../utils/useAuthHeaders";
 import Community from "./Community";
+import { Tooltip } from "react-tooltip";
 
 const HomePage = () => {
   const [chats, setChats] = useState([]);
@@ -161,11 +162,11 @@ const HomePage = () => {
               <p className="text-zinc-300 text-base mt-2">
                 {moment(user.user[0].created_at).format("D.MM.YY")}
               </p>
-          
             </div>
           </div>
         </Modal>
       )}
+      <Tooltip id="my-tooltip" />
     </section>
   );
 };

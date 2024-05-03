@@ -169,7 +169,7 @@ const Chats = ({ chats, user, newChatUser = null }) => {
                   <li
                     key={index}
                     onClick={() => fetchChatMessages(chat.chat_id, chat.id)}
-                    className="flex justify-between items-center my-2"
+                    className="flex justify-between items-center my-3"
                   >
                     <p className="text-xl">{chat.nickname}</p>
                     <p className="text-xs">
@@ -280,7 +280,6 @@ const Chats = ({ chats, user, newChatUser = null }) => {
           )}
         </div>
       </div>
-      <Tooltip id="my-tooltip" />
     </section>
   );
 };

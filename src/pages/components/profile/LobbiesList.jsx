@@ -79,7 +79,7 @@ const LobbiesList = ({
                 <li
                   key={index}
                   onClick={() => fetchMessages(lobby.id)}
-                  className="flex justify-between items-center my-2"
+                  className="flex justify-between items-center my-3"
                 >
                   <p className="text-xl">{lobby.name}</p>
                   {lobby.latest_message_time ? (

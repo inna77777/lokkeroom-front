@@ -140,7 +140,6 @@ const LobbyInfo = ({ lobbyInfo, userCur, createUserChat, setPage }) => {
           </div>
         </div>
       )}
-      <Tooltip id="my-tooltip" />
 
       <Modal
         isOpen={modalIsOpen}
