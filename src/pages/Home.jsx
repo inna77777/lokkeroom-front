@@ -10,12 +10,12 @@ function Home() {
       </h1>
       <p className="flex gap-1 justify-center text-3xl">
         <a href="/register" className="text-sky-700 hover:text-sky-950 ">
-          <Link to="/register">Register</Link>{" "}
+          <Link to="/register">Register</Link>
         </a>
 
         <span>or</span>
         <a href="/login" className="text-sky-700  hover:text-sky-950 ">
-          <Link to="/login">Login</Link>{" "}
+          <Link to="/login">Login</Link>
         </a>
       </p>
       <Tooltip id="my-tooltip" />
