@@ -17,19 +17,22 @@ const Sidebar = ({ fetchChats, fetchLobbies, fetchCommunity, openModal }) => {
         <i
           data-tooltip-id="my-tooltip"
           data-tooltip-content="Chats"
-          className="fa-brands fa-rocketchat"
+          data-placement="right"
+          className="fa-brands fa-rocketchat hover:text-cyan-200 cursor-pointer"
           onClick={fetchChats}
         ></i>
         <i
           data-tooltip-id="my-tooltip"
           data-tooltip-content="Lobbies"
-          className="fa-solid fa-user-group"
+          data-placement="right"
+          className="fa-solid fa-user-group hover:text-cyan-200 cursor-pointer"
           onClick={fetchLobbies}
         ></i>
         <i
           data-tooltip-id="my-tooltip"
           data-tooltip-content="Community"
-          className="fa-solid fa-people-group"
+          data-placement="right"
+          className="fa-solid fa-people-group hover:text-cyan-200 cursor-pointer"
           onClick={fetchCommunity}
         ></i>
         <hr />
@@ -38,13 +41,13 @@ const Sidebar = ({ fetchChats, fetchLobbies, fetchCommunity, openModal }) => {
         <i
           data-tooltip-id="my-tooltip"
           data-tooltip-content="Logout"
-          className="fa-solid fa-right-from-bracket"
+          className="fa-solid fa-right-from-bracket hover:text-red-500 cursor-pointer"
           onClick={() => logout()}
         ></i>
         <i
           data-tooltip-id="my-tooltip"
           data-tooltip-content="Your info"
-          className="fa-solid fa-user my-2"
+          className="fa-solid fa-user my-2 hover:text-cyan-200 cursor-pointer"
           onClick={openModal}
         ></i>
       </div>

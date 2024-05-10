@@ -89,8 +89,8 @@ const LobbyMess = ({
           return (
             <li
               key={index}
-              className={`w-fit px-2 rounded bg-[#202C33] text-2xl mb-2 flex flex-col ${
-                isMyMessage ? "self-end" : "self-start"
+              className={`w-fit px-2 rounded  text-2xl mb-2 flex flex-col  ${
+                isMyMessage ? "self-end bg-cyan-900" : "self-start bg-[#202C33]"
               }`}
             >
               <div className="flex gap-1 justify-center group relative">
@@ -100,7 +100,7 @@ const LobbyMess = ({
                   ) : (
                     <p className="text-xs">{message.nickname}</p>
                   )}
-                  <p >{message.content}</p>
+                  <p>{message.content}</p>
                 </div>
                 <div className="flex gap-3 justify-center group items-center">
                   {isMyMessage ? (

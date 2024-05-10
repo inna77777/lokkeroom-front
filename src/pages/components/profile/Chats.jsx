@@ -169,7 +169,7 @@ const Chats = ({ chats, user, newChatUser = null }) => {
                   <li
                     key={index}
                     onClick={() => fetchChatMessages(chat.chat_id, chat.id)}
-                    className="flex justify-between items-center my-3"
+                    className="flex justify-between items-center my-3 hover:text-cyan-200 cursor-pointer"
                   >
                     <p className="text-xl">{chat.nickname}</p>
                     <p className="text-xs">
@@ -224,8 +224,8 @@ const Chats = ({ chats, user, newChatUser = null }) => {
                 return (
                   <li
                     key={index}
-                    className={`w-fit  rounded bg-[#202C33] text-2xl mb-2 flex flex-col items-start px-5 ${
-                      isMyMessage ? "self-end" : "self-start"
+                    className={`w-fit  rounded text-2xl mb-2 flex flex-col items-start px-5 ${
+                      isMyMessage ? "self-end bg-cyan-900" : "self-start bg-[#202C33]"
                     }`}
                   >
                     {/* group-hover:block hover:bg-[red] hidden */}

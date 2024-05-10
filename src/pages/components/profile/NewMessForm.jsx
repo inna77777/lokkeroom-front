@@ -51,11 +51,11 @@ const NewMessForm = ({
           value={valueMess}
           onChange={(e) => setValueMess(e.target.value)}
           placeholder="Write message"
-          className="self-center rounded-xl h-12  pl-3 bg-[#2A3942] focus:outline-none placeholder:bg-[#2A3942] placeholder:text-xl  placeholder:pb-2 placeholder:pl-3 w-5/6"
+          className="self-center rounded-xl h-12  pl-3 bg-[#2A3942] focus:outline-none placeholder:bg-[#2A3942] placeholder:text-xl  placeholder:pb-2 placeholder:pl-3 w-5/6 "
         />
         <button
           type="submit"
-          className="bg-[#2A3942] ml-1 h-12 px-4 rounded-xl  "
+          className="bg-[#2A3942] ml-1 h-12 px-4 rounded-xl  hover:bg-cyan-500"
         >
           <i className="fa-regular fa-paper-plane text-2xl"></i>
         </button>

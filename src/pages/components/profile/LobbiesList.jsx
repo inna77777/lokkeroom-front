@@ -59,7 +59,7 @@ const LobbiesList = ({
         <div className="flex justify-between items-center mb-1">
           <h2 className="text-3xl my-2">Lobbies</h2>
           <i
-            className="fa-solid fa-plus"
+            className="fa-solid fa-plus hover:text-cyan-200 cursor-pointer"
             onClick={() => setPage("createLobby")}
           ></i>
         </div>
@@ -71,7 +71,9 @@ const LobbiesList = ({
           onChange={(e) => searchLobby(e)}
           className="self-center w-full rounded mt-2 pl-3 h-10 mb-5 bg-[#202C33] focus:outline-none placeholder:bg-[#202C33] placeholder:text-base  placeholder:pb-2	"
         />
-        {lobbies.lobbies?.length === 0 && <p className="2xl">You don't have any lobbies.</p>}
+        {lobbies.lobbies?.length === 0 && (
+          <p className="2xl">You don't have any lobbies.</p>
+        )}
         {lobbies.lobbies?.length > 0 && (
           <ul>
             {filteredLobbies.map((lobby, index) => {
@@ -79,7 +81,7 @@ const LobbiesList = ({
                 <li
                   key={index}
                   onClick={() => fetchMessages(lobby.id)}
-                  className="flex justify-between items-center my-3"
+                  className="flex justify-between items-center my-3 hover:text-cyan-200 cursor-pointer"
                 >
                   <p className="text-xl">{lobby.name}</p>
                   {lobby.latest_message_time ? (

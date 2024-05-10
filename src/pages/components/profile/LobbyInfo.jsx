@@ -114,7 +114,7 @@ const LobbyInfo = ({ lobbyInfo, userCur, createUserChat, setPage }) => {
           <div className="flex gap-5">
             {lobbyInfo.info?.admin_id === userCur.user[0]?.id ? (
               <i
-                className="fa-solid fa-trash hover:text-gray-500"
+                className="fa-solid fa-trash hover:text-red-500 cursor-pointer"
                 data-tooltip-id="my-tooltip"
                 data-tooltip-content="Delete chat"
                 onClick={() =>
@@ -123,7 +123,7 @@ const LobbyInfo = ({ lobbyInfo, userCur, createUserChat, setPage }) => {
               ></i>
             ) : (
               <i
-                className="fa-solid fa-circle-minus hover:text-gray-500"
+                className="fa-solid fa-circle-minus hover:text-red-500 cursor-pointer"
                 data-tooltip-id="my-tooltip"
                 data-tooltip-content="Quit chat"
                 onClick={() =>
@@ -134,7 +134,7 @@ const LobbyInfo = ({ lobbyInfo, userCur, createUserChat, setPage }) => {
             <i
               data-tooltip-id="my-tooltip"
               data-tooltip-content="See users"
-              className="fa-solid fa-users hover:text-gray-500"
+              className="fa-solid fa-users hover:text-cyan-200 cursor-pointer"
               onClick={() => fetchLobbyUsers(lobbyInfo.info.id)}
             ></i>
           </div>
@@ -183,7 +183,8 @@ const LobbyInfo = ({ lobbyInfo, userCur, createUserChat, setPage }) => {
                   userCur.user[0]?.id !== user.id ? (
                     <button
                       className="text-sm
-                    bg-red-800 h-fit rounded-md px-4" py-2
+                    bg-red-800 h-fit rounded-md px-4 hover:text-gray-200 cursor-pointer"
+                      py-2
                       onClick={() =>
                         removeUser(user.id, user.nickname, lobbyInfo.info?.id)
                       }

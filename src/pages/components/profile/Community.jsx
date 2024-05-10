@@ -80,7 +80,7 @@ const Community = ({
         />
         <button
           type="submit"
-          className="bg-[#2A3942] ml-2 px-5 rounded h-12 text-[#9CA3AF] text-xl"
+          className="bg-[#2A3942] ml-2 px-5 rounded h-12 text-[#9CA3AF] text-xl hover:bg-cyan-500 hover:text-white cursor-pointer"
         >
           Search
         </button>
@@ -89,16 +89,16 @@ const Community = ({
         <i
           data-tooltip-id="my-tooltip"
           data-tooltip-content="Find user"
-          className={`fa-solid fa-user-secret hover:text-gray-600 ${
-            group === "users" ? "text-gray-600" : ""
+          className={`fa-solid fa-user-secret hover:text-cyan-200 cursor-pointer ${
+            group === "users" ? "" : "text-gray-400"
           }`}
           onClick={() => setGroup("users")}
         ></i>
         <i
           data-tooltip-id="my-tooltip"
           data-tooltip-content="Find lobby"
-          className={`fa-solid fa-users-line hover:text-gray-600 ${
-            group === "lobbies" ? "text-gray-600" : ""
+          className={`fa-solid fa-users-line hover:text-cyan-200 cursor-pointer ${
+            group === "lobbies" ? "" : "text-gray-400"
           }`}
           onClick={() => setGroup("lobbies")}
         ></i>
@@ -109,17 +109,17 @@ const Community = ({
           filteredUsers.map((user, index) => (
             <li
               key={index}
-              className="flex justify-between items-center"
+              className="flex justify-between items-center hover:text-cyan-200 cursor-pointer text-gray-400"
               onClick={() => getSingleUser(user)}
             >
               <div className="flex items-center gap-3 my-1">
                 <div className="py-4 px-5 bg-[#6a7175] w-fit rounded-full">
                   <i className="fa-solid fa-user"></i>
                 </div>
-                <p className="text-white text-lg">{user.nickname}</p>
+                <p className=" text-lg ">{user.nickname}</p>
               </div>
 
-              <p className="text-sm text-gray-400 hover:text-gray-600 cursor-pointer	">
+              <p className="text-sm">
                 View details
               </p>
             </li>
