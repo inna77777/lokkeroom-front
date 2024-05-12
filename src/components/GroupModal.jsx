@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
-import useAuthHeaders from "../../../utils/useAuthHeaders";
+import useAuthHeaders from "../utils/useAuthHeaders";
 
 const GroupModal = ({ uId, uNick }) => {
   const [modalIsOpen, setIsOpen] = useState(true);
@@ -60,7 +60,10 @@ const GroupModal = ({ uId, uNick }) => {
           contentLabel="Example Modal"
         >
           <div className="bg-[#232428] px-6 pb-10  text-white flex flex-col ">
-            <i className="fa-solid fa-xmark self-end mb-6 mt-2 text-3xl" onClick={closeModal}></i>
+            <i
+              className="fa-solid fa-xmark self-end mb-6 mt-2 text-3xl"
+              onClick={closeModal}
+            ></i>
             <div className="bg-[#111214] rounded-lg p-2">
               <h2 className="text-[32px] mb-4 capitalize">add {uNick} to: </h2>
               <p className="text-2xl mb-3">Your lobbies:</p>

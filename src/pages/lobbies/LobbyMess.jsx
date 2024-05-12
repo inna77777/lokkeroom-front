@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import moment from "moment";
-import NewMessForm from "./NewMessForm";
+import NewMessForm from "../../components/NewMessForm";
 
 const LobbyMess = ({
   lobbyMessages,
@@ -100,7 +100,7 @@ const LobbyMess = ({
                   ) : (
                     <p className="text-xs">{message.nickname}</p>
                   )}
-                  <p >{message.content}</p>
+                  <p>{message.content}</p>
                 </div>
                 <div className="flex gap-3 justify-center group items-center">
                   {isMyMessage ? (

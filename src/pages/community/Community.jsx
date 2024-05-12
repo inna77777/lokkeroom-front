@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import GroupModal from "./GroupModal";
-import UsersModal from "./UsersModal";
+import GroupModal from "../../components/GroupModal";
+import UsersModal from "../../components/UsersModal";
 import { Tooltip } from "react-tooltip";
 
 const Community = ({
@@ -150,7 +150,7 @@ const Community = ({
             </li>
           ))}
       </ul>
-      
+
       {modalUser && (
         <UsersModal
           createChat={createChat}

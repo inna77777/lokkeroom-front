@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import moment from "moment";
 import LobbyMess from "./LobbyMess";
-import useAuthHeaders from "../../../utils/useAuthHeaders";
+import useAuthHeaders from "../../utils/useAuthHeaders";
 import LobbyInfo from "./LobbyInfo";
 import CreateLobby from "./CreateLobby";
 
@@ -71,7 +71,9 @@ const LobbiesList = ({
           onChange={(e) => searchLobby(e)}
           className="self-center w-full rounded mt-2 pl-3 h-10 mb-5 bg-[#202C33] focus:outline-none placeholder:bg-[#202C33] placeholder:text-base  placeholder:pb-2	"
         />
-        {lobbies.lobbies?.length === 0 && <p className="2xl">You don't have any lobbies.</p>}
+        {lobbies.lobbies?.length === 0 && (
+          <p className="2xl">You don't have any lobbies.</p>
+        )}
         {lobbies.lobbies?.length > 0 && (
           <ul>
             {filteredLobbies.map((lobby, index) => {

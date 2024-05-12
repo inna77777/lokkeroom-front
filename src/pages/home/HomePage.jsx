@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
-import Lobbies from "./Lobbies";
-import Chats from "./Chats";
+import Lobbies from "../lobbies/Lobbies";
+import Chats from "../chats/Chats";
 import Sidebar from "./Sidebar";
 import moment from "moment";
 
-import useAuthHeaders from "../../../utils/useAuthHeaders";
-import Community from "./Community";
+import useAuthHeaders from "../../utils/useAuthHeaders";
+import Community from "../community/Community";
 import { Tooltip } from "react-tooltip";
 
 const HomePage = () => {
@@ -19,21 +19,21 @@ const HomePage = () => {
   const [newChatUser, setNewChatUser] = useState(null);
   const authHeaders = useAuthHeaders();
 
- const customStyles = {
-   content: {
-     top: "50%",
-     left: "50%",
-     right: "auto",
-     bottom: "auto",
-     marginRight: "-50%",
-     transform: "translate(-50%, -50%)",
-     backgroundColor: "#747264",
-     padding: "0",
-     width: "500px",
-     color: "white",
-     borderRadius: "16px",
-   },
- };
+  const customStyles = {
+    content: {
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "-50%",
+      transform: "translate(-50%, -50%)",
+      backgroundColor: "#747264",
+      padding: "0",
+      width: "500px",
+      color: "white",
+      borderRadius: "16px",
+    },
+  };
 
   const fetchChats = async () => {
     const response = await fetch(
@@ -172,4 +172,3 @@ const HomePage = () => {
 };
 
 export default HomePage;
-

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import useAuthHeaders from "../../../utils/useAuthHeaders";
+import useAuthHeaders from "../../utils/useAuthHeaders";
 import Modal from "react-modal";
 import { Tooltip } from "react-tooltip";
-import UsersModal from "./UsersModal";
-import GroupModal from "./GroupModal";
+import UsersModal from "../../components/UsersModal";
+import GroupModal from "../../components/GroupModal";
 
 const LobbyInfo = ({ lobbyInfo, userCur, createUserChat, setPage }) => {
   const [lobbyUsers, setLobbyUsers] = useState([]);
@@ -183,7 +183,8 @@ const LobbyInfo = ({ lobbyInfo, userCur, createUserChat, setPage }) => {
                   userCur.user[0]?.id !== user.id ? (
                     <button
                       className="text-sm
-                    bg-red-800 h-fit rounded-md px-4" py-2
+                    bg-red-800 h-fit rounded-md px-4"
+                      py-2
                       onClick={() =>
                         removeUser(user.id, user.nickname, lobbyInfo.info?.id)
                       }

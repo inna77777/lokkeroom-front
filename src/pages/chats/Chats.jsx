@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import moment from "moment";
-import NewMessForm from "./NewMessForm";
-import useAuthHeaders from "../../../utils/useAuthHeaders";
+import NewMessForm from "../../components/NewMessForm";
+import useAuthHeaders from "../../utils/useAuthHeaders";
 import { Tooltip } from "react-tooltip";
 
 const Chats = ({ chats, user, newChatUser = null }) => {
@@ -117,8 +117,6 @@ const Chats = ({ chats, user, newChatUser = null }) => {
     console.log(data);
     alert("mess was deleted");
     fetchChatMessages(chatId, chatUser.user.id);
-
-    // window.location.reload();
   };
 
   const reset = () => {

@@ -2,7 +2,7 @@ import React from "react";
 import { Tooltip } from "react-tooltip";
 import { Link } from "react-router-dom";
 
-function Home() {
+function WelcomePage() {
   return (
     <div className="text-center">
       <h1 className="text-neutral-900 mt-10 mb-5 text-4xl">
@@ -23,4 +23,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default WelcomePage;
