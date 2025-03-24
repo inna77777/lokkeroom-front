@@ -1,4 +1,4 @@
-Lockeroom Frontend
+# Lockeroom Frontend
 Lockeroom frontend is designed to provide users with an intuitive, fast, and secure messaging solution. The application is built using React for dynamic user interfaces, Tailwind CSS for responsive and flexible design, and additional libraries like Tooltip and React Modal to enhance user interactions. It seamlessly integrates with the Lockeroom backend to offer real-time messaging and user management within a lobby system. Below is a detailed overview of the project and how to get started.
 
 Project Overview
@@ -27,7 +27,7 @@ React Modal: A library that provides modal windows for displaying content such a
 How to Get Started
 1. Clone the Repository
   ```bash
-https://github.com/inna77777/lokkeroom-front.git
+git clone https://github.com/inna77777/lokkeroom-front.git
 ```
 
 2.Navigate to the project directory:
